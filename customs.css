@@ -1,237 +1,126 @@
-/* LINKS */
+.logo{
+    width: 40px;
+}
+/* header{
+    position: fixed;
+    background: #f5ebd2!important;
+    width: 100%;
+    z-index: 99;
+} */
+header{    
+    background:#f5ebd2d2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.5s;
+    padding: 10px;
+    z-index: 10;
+}
+header.abajo{
+    position: fixed;
+    background:#f5ebd2;
+    transition: all 0.5s;
+}
+header.abajo .navbar .container{
+    border: none;
+    transition: 0.7s;
+}
+
+
+
+
+
+
+body{
+    background: #f5ebd2!important;
+}
+/*LINKS*/
+.nav-link{
+    border-radius: 20px;
+    background-color: #af634a00;
+    padding: 5px 10px;
+    color: #502314;
+    font-size: 13px;
+    font-weight: 700;
+}
+.nav-link:hover{
+    border-radius: 20px;
+    background-color: #af634a26;
+    color: #D72300CC;
+}
 .link-yellow{
-    background-color: #FCD535;
-    text-decoration: none;
+    background-color: #ffbf18;
+    padding: 10px 20px;
     color: black;
-    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 14px;
 }
 .link-yellow:hover{
-    background-color: #ebc631;
-    color: black;
-}
-.link-grey-yellow{
-    color: grey;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-}
-.link-grey-yellow:hover{
-    color: #ebc631;
-}
-.link-yellow-white{
-    text-decoration: none;
-    color: #ebc631;
-}
-.link-yellow-white:hover{
-    color: #fff;
-}
-.link-light-grey{
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 30px;
-    background-color: #474D57;
-}
-.link-light-grey:hover{
-    background-color: #3f434a;
-    color: #fff;
-}
-body{
-    background-color: rgb(11, 14, 17);;
-    color: #fff;
-}
-.navbar{
-    background-color: rgb(24, 26, 32);
-}
-.navbar-brand img{
-    width: 30px;
-    height: 30px;
-}
-.navbar-brand{
-    color: #ebc631;
-}
-.navbar-brand:hover{
-    color: #ebc631;
-}
-.navbar .link-yellow{
-    font-size: 13px;
-}
-.navbar .nav-link{
-    margin: 0 8px;
-    color: #fff;
-    font-size: 14px;
-}
-.navbar .nav-link:hover{
-    color: #ebc631;
-}
-.dropdown-menu{
-    background-color: rgb(24, 26, 32);
-    min-width: 300px;
-}
-.cart i{
-    font-size: 20px;
-}
-.menu-doble{
-    min-width: 1000px;
-    transform: translate3d(-500px, 0px, 0px);
-}
-.menu-triple{
-    min-width: 1000px;
-}
-.menu-triple span{
-    display: flex;
-    flex-wrap: wrap;
-}
-.content-nav h6{
-    font-size: 15px;
-    color: #fff;
-}
-.content-nav img{
-    width: 30px;
-    height: 30px;
-}
-.content-nav span{
-    color: rgb(183, 189, 198);
-    font-size: 13px;
-}
-.dropdown-item:hover{
-    background-color: rgba(255, 255, 255, 0.093);
-}
-.header-bottom{
-    background-color: rgb(60, 38, 1);
-    font-size: 14px;
-    color: rgb(183, 189, 198);
-}
-.introduction-home .form-control{
-    background-color: transparent;
-    border: 1px solid #FCD535;
-}
-.introduction-home .form-control:focus{
-    box-shadow: none;
-}
-.introduction-home h1{
-    font-size: 55px;
-}
-.introduction-home h3{
-    font-size: 20px;
-}
-.introduction-home p{
-    font-size: 14px;
-}
-
-.cryptos, .wallet, .nft, .trusted, footer{
-    background-color: rgb(24, 26, 32);
-}
-.cryptos th{
-    color: gray;
-    font-size: 14px;
-    font-weight: 400;
-}
-.table > :not(caption) > * > *{
-    border-style: none !important;
-}
-.cryptos td{
-    color: #fff;
-    font-size: 13px;
-}
-.cryptos tr:hover{
-    background-color: rgba(102, 102, 102, 0.133);
-}
-.cryptos tr:hover td{
-    color: #fff;
-}
-.cryptos td code{
-    color: rgb(26, 171, 26);
-    font-size: 13px;
-}
-.cryptos th img{
-    width: 25px;
-    height: 25px;
-}
-.cryptos h3{
-    font-size: 20px;
-}
-.cryptos h4{
-    font-size: 15px;
+    background-color: #edaf12;
     color: rgb(255, 255, 255);
 }
-.cryptos span{
+.link-white{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.link-white:hover{
+    color: black;
+}
+/*SECTIONS*/
+.introduction{
+    background-image: url(./images/BANNER-WEB_BK-1.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+.card-home img{
+    width: 100%;
+    height: 250px;
+}
+.card-home .card{
+    height: 450px;
+}
+.card-home h2{
+    font-size: 25px;
+    font-weight: 900;
+}
+.card-home p{
     font-size: 14px;
-    font-weight: 100;
-    color: gray;
 }
-
-.wallet .card{
-    background-color: transparent;
-}
-.wallet .col-md-2 img{
-    width: 60px;
-}
-.wallet h4{
-    font-size: 18px;
-}
-.wallet span{
-    color: rgb(183, 189, 198);
-    font-size: 14px;
-    font-weight: 400;
-}
-.big-phone img{
+footer .yellow-footer img{
     width: auto;
-    height: 700px;
 }
-
-.card-dark{
-    background-color: #0B0E11;
-    min-height: 500px;
+footer .yellow-footer{
+    background-color: #ffbf18;
+    width: 100%;
 }
-
-.scan-code{
-    background-color: #02020297;
+footer img{
+    width: 100px;
 }
-.scan-code img{
-    width: 70px;
+footer .logo{
+    width: 20px;
 }
-.download{
-    max-width: 80%;
-    max-height: 300px;
-}
-.card-transparent{
-    background-color: transparent;
-}
-.card-transparent span i{
-    font-size: 30px;
-}
-.card-transparent h5{
-    font-size: 14px;
-}
-.card-transparent:hover{
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.066);
-}
-
-footer h5{
-    font-size: 16px;
-    color: #fff;
-}
-footer a i{
-    font-size: 20px;
-    margin: 8px;
-}
-footer .link-grey-yellow{
-    font-size: 13px;
+footer span{
+    font-size: 11px;
     font-weight: 400;
+    color: rgb(62, 62, 62);
+    font-weight: 700;
 }
-footer .accordion-item, .accordion-body, .accordion-button{
-    background-color: transparent;
-    border: none;
+footer a{
+    text-decoration: none;
 }
-.accordion-button:not(.collapsed){
-    background-color: transparent;
-    box-shadow: transparent;
+footer span i{
+    padding: 8px;
+    border-radius: 100%;
+    border: 1px solid rgb(62, 62, 62);
+    font-size: 22px;
 }
-.accordion-button:focus{
-    border: none;
-    box-shadow: none;
-}
-.accordion-button::after{   
-    filter: grayscale(1);
+footer span i:hover{
+    border: 1px solid #edaf12;
+    color: white;
+    background-color: #ffbf18;
 }
