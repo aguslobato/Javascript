@@ -91,44 +91,44 @@
 
       } 
       
-      pay()
+      // pay()
 
     } while (order())
 
-    function pay () {
+    // function pay () {
           
-        paymentMethod = prompt("Elija cual metodo de pago le gustaria utilizar: Tarjeta de Credito (1), Efectivo (2), Transferencia (3) \n 0 para salir")
+    //     paymentMethod = prompt("Elija cual metodo de pago le gustaria utilizar: Tarjeta de Credito (1), Efectivo (2), Transferencia (3) \n 0 para salir")
         
-        if (paymentMethod === 1) {
-          creditCard()
-        } 
-        else if (paymentMethod === 2) {
+    //     if (paymentMethod === 1) {
+    //       creditCard()
+    //     } 
+    //     else if (paymentMethod === 2) {
               
-        }
-        else if (paymentMethod === 3) {}
-        else (order())
+    //     }
+    //     else if (paymentMethod === 3) {}
+    //     else (order())
     
-    }
+    // }
 
-    function creditCard () {
+    // function creditCard () {
 
-        installments = prompt("Elija la cantidad de cuotas (3) (6) (9) (12) \n 0 para salir")
+    //     installments = prompt("Elija la cantidad de cuotas (3) (6) (9) (12) \n 0 para salir")
         
-        if (installments === 3) {
-          alert(`En 3 cuotas te quedaria un total de ${priceWithPromotion / 3} por mes`)
-        } 
-        else if (installments === 6) {
-          alert(`En 6 cuotas te quedaria un total de ${priceWithPromotion / 6} por mes`)
-        }
-        else if (installments === 9) {
-          alert(`En 9 cuotas te quedaria un total de ${priceWithPromotion / 9} por mes`)
-        }
-        else if (installments === 12) {
-          alert(`En 12 cuotas te quedaria un total de ${priceWithPromotion / 12} por mes`)
-        }
-        else (order())
+    //     if (installments === 3) {
+    //       alert(`En 3 cuotas te quedaria un total de ${priceWithPromotion / 3} por mes`)
+    //     } 
+    //     else if (installments === 6) {
+    //       alert(`En 6 cuotas te quedaria un total de ${priceWithPromotion / 6} por mes`)
+    //     }
+    //     else if (installments === 9) {
+    //       alert(`En 9 cuotas te quedaria un total de ${priceWithPromotion / 9} por mes`)
+    //     }
+    //     else if (installments === 12) {
+    //       alert(`En 12 cuotas te quedaria un total de ${priceWithPromotion / 12} por mes`)
+    //     }
+    //     else (order())
  
-    }
+    // }
 
   }
 
@@ -142,7 +142,7 @@
       } 
       //Muestra el menu en promocion
       else if (opcion === 2) {
-        menuPromotion()
+       menuPromotion()
       }
       else if (opcion === 3) {
        simulaterOrder()
