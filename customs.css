@@ -91,36 +91,51 @@ body{
 .card-home p{
     font-size: 14px;
 }
-footer .yellow-footer img{
-    width: auto;
-}
-footer .yellow-footer{
-    background-color: #ffbf18;
-    width: 100%;
+footer{
+    background-color: #502314;
+    color: #fff;
 }
 footer img{
-    width: 100px;
+    width: 40px;
+    background-color: #af634a26;
+    padding: 8px;
+    border-radius: 50%;
 }
-footer .logo{
-    width: 20px;
+footer img:hover{
+    transform: scale(1.1,1.1);
 }
-footer span{
-    font-size: 11px;
-    font-weight: 400;
-    color: rgb(62, 62, 62);
-    font-weight: 700;
+footer h1{
+    font-size: 30px;
+    font-weight: 100;
+}
+footer h4{
+    font-size: 18px
 }
 footer a{
     text-decoration: none;
+    color: rgb(213, 213, 213);
+    font-size: 12px;
+    font-weight: 400;
 }
-footer span i{
+footer a:hover{
+    color: #e23513cc;
+}
+footer a i{
+    font-size: 20px;
     padding: 8px;
-    border-radius: 100%;
-    border: 1px solid rgb(62, 62, 62);
-    font-size: 22px;
+    border-radius: 50%;
 }
-footer span i:hover{
-    border: 1px solid #edaf12;
-    color: white;
-    background-color: #ffbf18;
+footer a i:hover{
+    background-color: #af634a26;
+    transform: scale(1.1,1.1);
+}
+footer .social-media a:hover{
+    color: #fff;
+}
+footer p{
+    font-size: 12px;
+    color: rgb(213, 213, 213);
+}
+footer .social-media{
+    border-top: 1px solid rgb(213, 213, 213);
 }
