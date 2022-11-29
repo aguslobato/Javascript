@@ -1,12 +1,6 @@
 .logo{
     width: 40px;
 }
-/* header{
-    position: fixed;
-    background: #f5ebd2!important;
-    width: 100%;
-    z-index: 99;
-} */
 header{    
     background:#f5ebd2d2;
     width: 100%;
@@ -17,21 +11,6 @@ header{
     padding: 10px;
     z-index: 10;
 }
-header.abajo{
-    position: fixed;
-    background:#f5ebd2;
-    transition: all 0.5s;
-}
-header.abajo .navbar .container{
-    border: none;
-    transition: 0.7s;
-}
-
-
-
-
-
-
 body{
     background: #f5ebd2!important;
 }
@@ -71,11 +50,11 @@ body{
 }
 /*SECTIONS*/
 .introduction{
-    background-image: url(./images/BANNER-WEB_BK-1.jpg);
+    background-image: url(./images/BK_WEB_SEPTIEMBRE_NUGGETS-PLANT-BASE_NOVEDADES__Mesa-de-trabajo-1.jpg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 800px;
+    height: 600px;
 }
 .card-home img{
     width: 100%;
@@ -138,4 +117,17 @@ footer p{
 }
 footer .social-media{
     border-top: 1px solid rgb(213, 213, 213);
+}
+.dark-mode {
+    background-color: #1b0737;
+  }
+
+@media (max-width: 1000px){
+    .introduction{
+        background-size: contain;
+        height: 400px;
+    }
+    .nav-link{
+        margin: 10px 0;
+    }
 }

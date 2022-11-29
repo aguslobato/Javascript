@@ -40,136 +40,14 @@
     {name: "King Vegetal", price: 950, category: "Vegetal", imageURL: "../../images/products/vegetable/King-de-Pollo_2604.png", id: 28, stock: 55}
 ]
 
+  function datesPerson () {}
 
-  //Muestra el menu completo
-  // function fullMenu () {
-
-  //   alert("Menu completo")
-  //   let listProducts = food.forEach((product) => {alert(`${product.category}  ${product.name}  $${product.price}`)})
-  //   filterOrder()
-  //   const choiceProduct = prompt("Escribi el nombre del producto que quieres")
-   
-  // }
-  /*
-  //Muestra el menu en promocion
-   function menuPromotion () {
-
-     let lookDiscount = food.filter(product => product.price > 900)
-
-     alert("Menu en promocion")
-    
-     lookDiscount.forEach((product) => {alert(`${product.category}  ${product.name}  $${product.price}`)})
-
-   }
-
-   function filterOrder () {
-
-     Filtrar por categoria que pida el cliente
-     let filterCategory = prompt("Elije la categoria que te gustaria ver")
-
-     alert(food.filter((product) => product.category === filterCategory))
-
-   }
-
-   function simulaterOrder () {
-
-     Te da la promocion del dia aleatoriamente del array
-     const promotionDay =  food[Math.floor(Math.random() * + food.length)]
-     let priceWithPromotion = promotionDay.price - (promotionDay.price * 20 / 100) Calcula el precio de la promocion con el descuento implementado y lo guarda en la variable
-
-     choiceCombo = prompt("Desea comprar la promocion del dia? (SI) (NO)")
-
-     if (choiceCombo === "si") {
-
-       alert(`La promocion del dia es: ${promotionDay.name}, ${promotionDay.category}, $${promotionDay.price}`)
-       alert(`Con el descuento del 20% te quedaria $${priceWithPromotion}`)
-
-     } 
-     else (order())
-
-   pay()
-
-   } 
-
-   function pay () {
-          
-     paymentMethod = prompt("Elija cual metodo de pago le gustaria utilizar: Tarjeta de Credito (1), Efectivo (2), Transferencia (3) \n 0 para salir")
-        
-     if (paymentMethod === 1) {
-       creditCard()
-     } 
-     else if (paymentMethod === 2) {
-       cash()
-     }
-     else if (paymentMethod === 3) {
-
-     }
-     else (order())
-    
-   }
-
-   function creditCard () {
-
-     installments = prompt("Elija la cantidad de cuotas (3) (6) (9) (12) \n 0 para salir")
-        
-     if (installments === 3) {
-       alert(`En 3 cuotas te quedaria un total de ${priceWithPromotion / 3} por mes`)
-     } 
-     else if (installments === 6) {
-       alert(`En 6 cuotas te quedaria un total de ${priceWithPromotion / 6} por mes`)
-     }
-     else if (installments === 9) {
-       alert(`En 9 cuotas te quedaria un total de ${priceWithPromotion / 9} por mes`)
-     }
-     else if (installments === 12) {
-       alert(`En 12 cuotas te quedaria un total de ${priceWithPromotion / 12} por mes`)
-     }
-     else (order())
-
-   }
-
-   function cash () {
-
-     alert("Estamos procesando su compra, aguarde un momento")
-
-     Formulario para tomar los datos del clientes para cuando se dirija al local para pagar
-     let containerCashBuy = document.getElementById("buyCash")
-  
-   }
-*/
-
-
-  // function order () {
- 
-  //   opcion = parseInt(prompt("Ingrese 1 para ver el Menu Completo \n Ingrese 2 para ver el Menu en Promocion \n Ingrese 3 para simular orden \n Ingrese 0 para salir"))
-  //   //Muestra el menu completo
-  //   if (opcion === 1) {
-  //     fullMenu()
-  //   } 
-  //   //Muestra el menu en promocion
-  //   else if (opcion === 2) {
-  //     menuPromotion()
-  //   }
-  //   else if (opcion === 3) {
-  //     simulaterOrder()
-  //   }
-  //   else (opcion != 0)
-
-  // }
-
-  // order()  
-
-
-  //MUESTRA EL MENU COMPLETO
-  
-  
   function viewProducts () {
 
     let containerProducts = document.getElementById("list-products")
 
     for (const product of food) {
       let cardProduct = document.createElement("div")
-
       if (product.stock < 5) {
         cardProduct.className = "productoSinStock"
       } else {
@@ -179,12 +57,13 @@
       cardProduct.id = product.id
       cardProduct.innerHTML = `
         <div class="card-container d-flex flex-column align-items-start justify-content-center p-2 rounded-3 my-2 py-3">
-          <h3 class="name-product mb-2">${product.name}</h3>
-          <img class="image-product my-3 img-fluid" src=${product.imageURL}>
-          <span class="category-product">Categoria: ${product.category}</span>
-          <h4 class="price-product">$${product.price}</h4>
-          <p class="stock-product">Quedan ${product.stock} u.</p>
-          <button id="add-cart"><i class='bx bxs-cart-add'></i></button>
+          <div class="card-container-head"><h3 class="name-product mb-2">${product.name}</h3></div>
+          <div class="card-container-body d-flex justify-content-center align-items-center"><img class="image-product my-3 img-fluid" src=${product.imageURL}></div>
+          <div class="card-container-footer">
+            <span class="category-product me-2">${product.category}</span>
+            <h4 class="price-product">$${product.price}</h4>
+            <button id="add-cart"><i class='bx bxs-cart-add'></i></button>
+          </div>
         </div>
       `
       
@@ -193,15 +72,19 @@
   }
   viewProducts()
 
-  function filterOrder () {
+  let filterCategory = document.getElementById("searchProduct").addEventListener("keypress", (e) => {
+    const {value} = e.target
+    filterOrder(value)
+  })
+
+  function filterOrder (value) {
 
     //Filtrar por categoria que pida el cliente
-    let filterCategory = document.getElementById("searchProduct")
     let containerProducts = document.getElementById("list-products")
-
-    for (const product of food.filter((product) => product.category === filterCategory)) {
+    containerProducts.innerHTML=""
+    //filtra la categoria letra por letra hasta encontrar los productos
+    for (const product of food.filter((product) => product.category.startsWith(value))) {
       let cardProduct = document.createElement("div")
-
       if (product.stock < 5) {
         cardProduct.className = "productoSinStock"
       } else {
@@ -223,6 +106,45 @@
       containerProducts.append(cardProduct)
     }
 
-
   }
 
+  document.getElementById("add-cart").addEventListener("click", () => {
+    localStorage.setItem("product", JSON.stringify(cardProduct))
+  })
+
+
+
+  function darkmode () {
+    const botonColorMode = document.querySelector("#color-mode");
+    const body = document.body;
+  
+    let darkMode = localStorage.getItem("dark-mode");
+  
+    function activarDarkMode() {
+      body.className.add("dark-mode");
+      localStorage.setItem("dark-mode", "activado");
+    }
+  
+    function desactivarDarkMode() {
+      body.className.remove("dark-mode");
+      localStorage.setItem("dark-mode", "desactivado");
+    }
+  
+    if (darkMode === "activado") {
+      activarDarkMode();
+    } else {
+      desactivarDarkMode();
+    }
+  
+    botonColorMode.addEventListener("click", () => {
+      darkMode = localStorage.getItem("dark-mode");
+      if (darkMode === "activado") {
+        desactivarDarkMode();
+      } else {
+        activarDarkMode();
+      }
+    })
+  }
+  darkmode()
+
+ 
