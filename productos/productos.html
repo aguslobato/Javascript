@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BURGER KING® ARGENTINA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../estilo.css" />
+    <link rel="stylesheet" href="./productos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html"><img src="../images/logo.png" alt="" class="img-fluid logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Pedi tu combo favorito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./productos/productos.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cupones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Restaurantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Delivery</a>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="py-5 container">
+            <div class="row p-2" id="contenedor"></div>
+        </div>
+        
+        <div class="container">
+            <div class="modal" tabindex="-1" role="dialog" id="modal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Carrito</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" id="vaciarCarrito">Vaciar carrito</button>
+                            <button type="button" id="procesarCompra" class="btn btn-success">Continuar compra</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <div>
+                                <span>Precio total:</span>
+                                <p class="text-center price-product" id="precioTotal"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="pedido" tabindex="-1" role="dialog" id="modal">
+                <div class="modal-dialog" role="document">
+                    <div class="pedido-body">
+                        <table class="table table-dark table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                              </tr>
+                            </thead>
+                            <tbody></tbody>
+                          </table>
+                    </div>
+                    <div><p class="text-center price-product" id="precioTotal"></p></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="link-carrito"><a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#modal"><i class='bx bx-cart' id="carritoContenedor">0</i></a></div>
+
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-center mb-5">
+                    <img src="../images/logo.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 col-lg-6 my-3">
+                    <h4>Info BK</h4>
+                    <a class="me-2 my-1" href="">Menu</a>
+                    <a class="me-2 my-1" href="">Restaurantes</a>
+                    <a class="me-2 my-1" href="">Cupones</a>
+                    <a class="me-2 my-1" href="">Minutos BK</a>
+                </div>
+                <div class="col-12 col-lg-6 my-3">
+                    <h4>Informacion</h4>
+                    <a class="me-2 my-1" href="">Sitemap</a>
+                </div>
+                <div class="col-12 my-3">
+                    <h4>My BK</h4>
+                    <a class="me-2 my-1" href="">Contactanos</a>
+                    <a class="me-2 my-1" href="">Empleo</a>
+                    <a class="me-2 my-1" href="">Delivery</a>
+                    <a class="me-2 my-1" href="">Politica de privacidad</a>
+                    <a class="me-2 my-1" href="">Defensa del consumidor</a>
+                </div>
+                <div class="col-12 social-media pt-3 border-top-1">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="d-flex">
+                                <a class="me-3" href=""><i class='bx bxl-facebook'></i></a>
+                                <a class="me-3" href=""><i class='bx bxl-instagram'></i></a>
+                                <a class="me-3" href=""><i class='bx bxl-youtube'></i></a>
+                                <a class="me-3" href=""><i class='bx bxl-twitter'></i></a>
+                                <a class="me-3" href=""><i class='bx bxl-whatsapp'></i></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 py-2">
+                            <p>TM © 2021 Burger King Corporation. Todos los derechos reservados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+.alerta{
+    font-weight:700;
+}
+.img-carrito{
+    width:200px;
+    padding:20px;
+} 
+.parrafo{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+}
+#precioTotal{
+    margin:0;
+    padding:0;
+}
+.boton{
+    opacity:0;
+}
+/*PRODUCTS*/
+
+.navbar-products img{
+    width: 80px;
+}
+.navbar-products h4{
+    font-size: 16px;
+    font-weight: 700;
+    color: #502314;
+}
+.navbar-products .accordion-button:not(.collapsed){
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #502314;
+}
+.navbar-products .accordion-button:focus{
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #502314;
+}
+.navbar-products .accordion-button{
+    background-color: transparent;
+    padding: 0;
+    border-bottom: 1px solid #502314;
+}
+.navbar-products .accordion-button:hover h4{
+    color: #D72300CC;
+}
+.navbar-products .accordion-button::after{
+    background: none;
+}
+.navbar-products .accordion-item{
+    background-color: transparent;
+    border: none;
+}
+.list-products a{
+    text-decoration: none;
+}
+.list-products a h4{
+    font-size: 15px;
+    font-weight: 700;
+    color: #502314;
+}
+.list-products a:hover{
+    text-decoration: none;
+    color: #502314;
+}
+.name-product{
+	font-family: 'Merriweather', serif;
+	font-weight: 700;
+    color: #502314;
+}
+.modal-contenedor .quantly-product{
+    color: #515151;
+}
+.name-product, .price-product{
+    font-size: 16px;
+}
+.price-product{
+    color: green;
+    font-size: 13px;
+    font-weight: 700;
+}
+.modal-contenedor .name-product{
+    color: #502314;
+    font-size: 13px;
+}
+.add-cart{
+    border: none;
+    color: #502314;
+    font-size: 25px;
+    background-color: transparent;
+}
+.card-container{
+    min-height: 180px;
+    max-height: 180px;
+    background-color: transparent;
+    border: 1px solid gray;
+}
+.card-container span, p{
+    color: #515151;
+    font-size: 10px;
+    font-weight: 700;
+}
+.buscar-producto{
+    border: 1px solid #502314;
+    color: #502314;
+    background-color: transparent;
+}
+.buscar-producto:focus{
+    color: #502314;
+    border: 1px solid #502314;
+    box-shadow: none;
+}
+.modal-contenedor button{
+    font-size: 12px;
+}
+.modal-content .modal-body{
+    overflow-y: scroll;
+    height: 350px;
+}
+.modal-body::-webkit-scrollbar {
+	width: 8px;
+	background: rgb(255, 255, 255);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+	background: #502314;
+	border-radius: 10px;
+}
+.close{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+}
+.link-carrito{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+}
+.link-carrito .nav-link i{ 
+    display: block;
+    text-decoration: none;
+    background: #502314;
+    color: #ffffff !important;
+    padding: 0;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 20px 0;
+    z-index: 99;
+}
+.swal2-popup{
+    font-size: 14px;
+}
+
+@media (max-width: 1000px){
+    .introduction{
+        height: 400px;
+    }
+    .nav-link{
+        margin: 10px 0;
+    }
+    .card-container{
+        min-height: 350px;
+        max-height: 350px;
+    }
+}

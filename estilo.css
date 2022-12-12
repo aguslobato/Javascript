@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Noto+Serif+Khojki:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+.logo{
+    width: 40px;
+}
+header{    
+    background:#f5ebd2d2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.5s;
+    padding: 10px;
+    z-index: 10;
+}
+body{
+    font-family: 'Noto Serif Khojki', serif;
+    background: #f5ebd2!important;
+}
+/*LINKS*/
+header .nav-link{
+	font-family: 'Merriweather', serif;
+    border-radius: 20px;
+    background-color: #af634a00;
+    padding: 5px 10px;
+    color: #502314;
+    font-size: 12px;
+    font-weight: 700;
+}
+header .nav-link i{
+    font-family: 'Merriweather', serif;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #502314;
+    font-size: 12px;
+    font-weight: 700;
+}
+header .nav-link i:hover{
+    border-radius: 20px;
+    color: #D72300CC;
+}
+header .nav-link:hover{
+    border-radius: 20px;
+    background-color: #af634a26;
+    color: #D72300CC;
+}
+.link-yellow{
+    background-color: #ffbf18;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+.link-yellow:hover{
+    background-color: #edaf12;
+    color: rgb(255, 255, 255);
+}
+.link-white{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.link-white:hover{
+    color: black;
+}
+/*SECTIONS*/
+.introduction{
+    background-image: url(./images/BK_WEB_SEPTIEMBRE_NUGGETS-PLANT-BASE_NOVEDADES__Mesa-de-trabajo-1.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+.locales .container{
+    background-color: #c657642d;
+}
+.locales input{
+    width: 70%;
+}
+.locales input:focus{
+    color: #502314;
+    border: 1px solid #502314;
+    box-shadow: none;
+}
+.locales h2{
+    font-family: 'Merriweather', serif;
+    color: #502314;
+    font-size: 22px;
+    font-weight: 900;
+}
+.locales p{
+    font-size: 15px;
+    color: rgb(91, 91, 91);
+}
+.locales img{
+    width: 150px;
+}
+.cards-home h2{
+    font-family: 'Merriweather', serif;
+    color: #502314;
+    font-size: 22px;
+    font-weight: 900;
+}
+.cards-home p{
+    color: rgb(91, 91, 91);
+    font-size: 14px;
+    font-weight: 700;
+}
+footer{
+    background-color: #502314;
+    color: #fff;
+}
+footer img{
+    width: 40px;
+    background-color: #af634a26;
+    padding: 8px;
+    border-radius: 50%;
+}
+footer img:hover{
+    transform: scale(1.1,1.1);
+}
+footer h1{
+    font-size: 30px;
+    font-weight: 100;
+}
+footer h4{
+    font-size: 18px
+}
+footer a{
+    text-decoration: none;
+    color: rgb(213, 213, 213);
+    font-size: 12px;
+    font-weight: 400;
+}
+footer a:hover{
+    color: #e23513cc;
+}
+footer a i{
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 50%;
+}
+footer a i:hover{
+    background-color: #af634a26;
+    transform: scale(1.1,1.1);
+}
+footer .social-media a:hover{
+    color: #fff;
+}
+footer p{
+    font-size: 12px;
+    color: rgb(213, 213, 213);
+}
+footer .social-media{
+    border-top: 1px solid rgb(213, 213, 213);
+}
+
+@media (max-width: 1000px){
+    .introduction{
+        height: 400px;
+    }
+    .nav-link{
+        margin: 10px 0;
+    }
+
+}
