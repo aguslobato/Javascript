@@ -67,36 +67,17 @@
                         </div>
                         <div class="modal-body"></div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" id="vaciarCarrito">Vaciar carrito</button>
-                            <button type="button" id="procesarCompra" class="btn btn-success">Continuar compra</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <div>
-                                <span>Precio total:</span>
-                                <p class="text-center price-product" id="precioTotal"></p>
+                            <button type="button" class="btn btn-outline-danger" id="vaciarCarrito">Vaciar Carrito</button>
+                            <button type="button" id="procesarPedido" onclick="pedido()" class="btn btn-outline-success">Procesar Pedido</button>
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <div class="row py-3">
+                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                    <span class="me-2">Precio total:</span>
+                                    <span class="text-center price-product" id="precioTotal"></span>                                    
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="pedido" tabindex="-1" role="dialog" id="modal">
-                <div class="modal-dialog" role="document">
-                    <div class="pedido-body">
-                        <table class="table table-dark table-hover">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                              </tr>
-                            </thead>
-                            <tbody></tbody>
-                          </table>
-                    </div>
-                    <div><p class="text-center price-product" id="precioTotal"></p></div>
                 </div>
             </div>
         </div>
@@ -152,6 +133,7 @@
 
     <script src="./script.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

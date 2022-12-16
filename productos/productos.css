@@ -129,6 +129,9 @@
 	background: #502314;
 	border-radius: 10px;
 }
+.modal-footer span{
+    font-size: 13px;
+}
 .close{
     background-color: transparent;
     border: none;
