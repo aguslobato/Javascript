@@ -168,3 +168,9 @@ footer .social-media{
     }
 
 }
+
+@media (max-width: 500px){
+    .introduction{
+        background-size: contain;
+    }
+}
